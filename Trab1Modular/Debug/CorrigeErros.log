@@ -1,0 +1,31 @@
+
+!!! Inicio dos testes
+!!!      Construto sob teste: Trab1Modular
+!!!      Script de teste:     CorrigeErros.script
+
+!!!    0  Linha:     1  // Script:    RecuperaErros.script 
+!!!    0  Linha:     2  // Autor:     Caio Melo, Mark Ribeiro, Guilheme Bizzo 
+!!!    0  Linha:     3  // Data:      28/03/2019 
+!!!    0  Linha:     4  // Propósito: Corrigir os erros gerados propositalmente. 
+    6  == Ir para no direita
+    9  == Criar arvore
+   12  == Ir para no direita
+   15  == Inserir a direita
+   18  == Ir para no esquerda
+   21  ==Ir para o pai
+   24  == Inserir a esquerda
+   27  == Inserir a direita
+   30  == Inserir a direita
+   33  == Obtem no atual
+   36  == Ir para no pai e obter no pai
+   40  == Destroi a arvore
+
+!!! Número de linhas lidas:          41
+!!! Número de casos de teste:        12
+!!! Número comandos corretos:        13
+!!! Número de falhas encontradas:     0
+
+!!! Não foram encontrados problemas
+
+
+!!! Numero de espacos ainda alocados: 0

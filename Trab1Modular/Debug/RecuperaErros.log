@@ -1,0 +1,41 @@
+
+!!! Inicio dos testes
+!!!      Construto sob teste: Trab1Modular
+!!!      Script de teste:     RecuperaErros.script
+
+!!!    0  Linha:     1  // Script:    RecuperaErros.script 
+!!!    0  Linha:     2  // Autor:     Caio Melo, Mark Ribeiro, Guilheme Bizzo 
+!!!    0  Linha:     3  // Data:      28/03/2019 
+!!!    0  Linha:     4  // Propósito: Recuperar os erros forçados propositalmente. 
+    6  == Ir para no direita
+>>>    1  Linha:     7  Retorno errado ao ir para direita. Deveria ser: 0  É: 4
+<<<    0  Linha:     8  Falha esperada foi recuperada. 
+   10  == Criar arvore
+   13  == Ir para no direita
+>>>    1  Linha:    14  Retorno errado ao ir para direita. Deveria ser: 0  É: 5
+<<<    0  Linha:    15  Falha esperada foi recuperada. 
+   17  == Inserir a direita
+   20  == Ir para no esquerda
+>>>    1  Linha:    21  Retorno errado ao ir para esquerda. Deveria ser: 0  É: 7
+<<<    0  Linha:    22  Falha esperada foi recuperada. 
+   24  ==Ir para o pai
+>>>    1  Linha:    25  Retorno errado ao ir para pai. Deveria ser: 0  É: 6
+<<<    0  Linha:    26  Falha esperada foi recuperada. 
+   28  == Inserir a esquerda
+   31  == Inserir a direita
+   34  == Inserir a direita
+   37  == Obtem no atual
+   40  == Ir para no pai e obter no pai
+>>>    1  Linha:    42  Conteúdo do nó está errado. Deveria ser: 'b'  É: 'c'
+<<<    0  Linha:    43  Falha esperada foi recuperada. 
+   45  == Destroi a arvore
+
+!!! Número de linhas lidas:          46
+!!! Número de casos de teste:        12
+!!! Número comandos corretos:         8
+!!! Número de falhas encontradas:     0
+
+!!! Não foram encontrados problemas
+
+
+!!! Numero de espacos ainda alocados: 0
