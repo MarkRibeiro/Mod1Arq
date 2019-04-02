@@ -201,8 +201,57 @@
 *     ARV_CondRetNaoPossuiFilho   - nó corrente não possui filho à direita
 *
 ***********************************************************************/
+   /***********************************************************************
+*
+*  $FC Função: ARV Costura
+*
+*  $EP Parâmetros
+*     $P ValorParm - é o parâmetro que receberá o valor contido no nó.
+*                    Este parâmetro é passado por referência.
+*
+*  $FV Valor retornado
+*     ARV_CondRetOK
+*     ARV_CondRetArvoreNaoExiste
+*     ARV_CondRetArvoreVazia
+*
+***********************************************************************/
 
    ARV_tpCondRet ARV_Costura( void ) ;
+
+
+
+      /***********************************************************************
+*
+*  $FC Função: ARV Faz Lista
+*
+*  $EP Parâmetros
+*     $P ValorParm - é o parâmetro que receberá o valor contido no nó.
+*                    Este parâmetro é passado por referência.
+*
+*  $FV Valor retornado
+*     ARV_CondRetOK
+*     ARV_CondRetArvoreNaoExiste
+*     ARV_CondRetArvoreVazia
+*
+***********************************************************************/
+   ARV_tpCondRet ARV_Faz_Lista( int n1, int n2, int n3 )
+
+   /***********************************************************************
+*
+*  $FC Função: ARV Printa Costura
+*
+*  $EP Parâmetros
+*     $P ValorParm - é o parâmetro que receberá o valor contido no nó.
+*                    Este parâmetro é passado por referência.
+*
+*  $FV Valor retornado
+*     ARV_CondRetOK
+*     ARV_CondRetArvoreNaoExiste
+*     ARV_CondRetArvoreVazia
+*
+***********************************************************************/
+
+   ARV_tpCondRet ARV_Printa( void ) ;
 
 
 /***********************************************************************

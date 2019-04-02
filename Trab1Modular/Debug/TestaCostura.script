@@ -1,7 +1,7 @@
 // Script:    RecuperaErros.script
 // Autor:     Caio Melo, Mark Ribeiro, Guilheme Bizzo
 // Data:      28/03/2019
-// Propósito: Corrigir os erros gerados propositalmente.
+// Propósito: Testar a costura.
 
 == Criar arvore
 =criar      0   0

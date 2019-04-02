@@ -22,6 +22,7 @@
 
 #include   <malloc.h>
 #include   <stdio.h>
+#include <stdlib.h>
 
 #define ARVORE_OWN
 #include "ARVORE.H"
@@ -61,6 +62,9 @@
 
 		 struct tgNoArvore * pNoCostura ;
                /* Ponteiro para o proximo a ser costurado*/
+
+		 struct NoLista* pNoLista;
+				/*Ponteiro para a lista encadeada de inteiros*/
                
                
 
@@ -92,10 +96,37 @@
 
    } tpArvore ;
 
+
+   /***********************************************************************
+*
+*  $TC Tipo de dados: ARV Descritor do primeiro nó da costura
+*
+*
+*  $ED Descrição do tipo
+*     O primeiro no da costura é a primeira folha que vai iniciar o processo de costura.
+*
+***********************************************************************/
+
    typedef struct primeiroCostura {
-	   tpNoArvore * pNoIni;
-	   tpNoArvore * pNoCorr;
+	   tpNoArvore * pNoIni; //Ponteiro para o primeiro nó da costura
+	   tpNoArvore * pNoCorr; //Ponteiro para o nó corrente da costura
    } PrimCost;
+
+    /***********************************************************************
+*
+*  $TC Tipo de dados: ARV Descritor da lista de numeros
+*
+*
+*  $ED Descrição do tipo
+*     Lista encadeada de inteiros que fara parte das folhas da arvore.
+*
+***********************************************************************/
+
+   typedef struct noLista  
+   { 
+	   int chave; 
+	   struct noLista * prox; 
+   }NoLista; 
 
 /*****  Dados encapsulados no módulo  *****/
 
@@ -139,11 +170,55 @@
 
    } /* Fim função: ARV Criar árvore */
 
-   /***************************************************************************
-*
-*  Função: ARV Costura
-*  ****/
-   /* function to swap data of two nodes a and b*/
+   /***************************************************************************/
+
+   /*Começo da função Faz Lista*/
+   void fazLista(tpNoArvore *No, int n1, int n2, int n3)
+   {
+	   NoLista*No1,*No2,*No3;
+	   No1=(NoLista*)malloc(sizeof(NoLista));
+	   No2=(NoLista*)malloc(sizeof(NoLista));
+	   No3=(NoLista*)malloc(sizeof(NoLista));
+
+	   No1->chave=n1;
+	   No2->chave=n2;
+	   No3->chave=n3;
+
+	   No1->prox=No2;
+	   No2->prox=No3;
+
+	   while(No!=NULL)
+	   {
+		   No->pNoLista=No1;
+		   No=No->pNoCostura;
+	   }
+   }
+
+   ARV_tpCondRet ARV_Faz_Lista( int n1, int n2, int n3 )
+   {
+      if ( pArvore != NULL )
+      {
+         if ( pArvore->pNoCorr != NULL )
+         {
+			 fazLista( costura->pNoIni, n1, n2, n3 ) ;
+         } 
+		 else
+		 {
+			 return ARV_CondRetArvoreVazia ;
+		 }
+		 return ARV_CondRetOK ;
+      }
+	  else
+	  {
+		  return ARV_CondRetArvoreNaoExiste ;
+	  }
+
+   } /* Fim função: ARV Faz Lista */
+
+
+   /***************************************************************************/
+   /****Função: Costura ****/
+   /* Função de troca de posição dos nós 'a' e 'b'*/
    void troca(tpNoArvore *a, tpNoArvore *b) 
    { 
 	   tpNoArvore * aux = ( tpNoArvore * ) malloc( sizeof( tpNoArvore )) ;
@@ -163,24 +238,15 @@
 	   b->pNoEsq=aux->pNoEsq;
 	   b->pNoPai=aux->pNoPai;
 	   b->Valor=aux->Valor;
-	   /*tpNoArvore *temp = b->pNoCostura; 
-
-	   if(a->Valor==start->Valor)
-		   start=b;
-
-	   b->pNoCostura = a; 
-	   a->pNoCostura = temp; */
    } 
 
+
+   /*Função que recebe a lista de costura e a ordena alfabeticamente*/
    void Ajeita_Lista(tpNoArvore *start) 
    { 
 	   int swapped, i; 
 	   tpNoArvore *ptr1; 
-	   tpNoArvore *lptr = NULL; 
-
-	   /* Checking for empty list */
-	   if (start == NULL) 
-		   return; 
+	   tpNoArvore *lptr = NULL;
 
 	   do
 	   { 
@@ -201,15 +267,6 @@
 	   while (swapped); 
    } 
 
-   void Print_Costura ()
-   {
-	   tpNoArvore *No = costura->pNoIni;
-	   while(No!=NULL)
-	   {
-		   printf("%c -> ", No->Valor);
-		   No=No->pNoCostura;
-	   }
-   }
 
    void Costura (tpNoArvore * pNo)
    {
@@ -258,11 +315,7 @@
 		 {
 			 return ARV_CondRetArvoreVazia ;
 		 }
-		 printf("\n   Antes da costura: ");
-		 Print_Costura();
 		 Ajeita_Lista(costura->pNoIni);
-		 printf("\n   Depois da costura: ");
-		 Print_Costura();
 		 return ARV_CondRetOK ;
       }
 	  else
@@ -292,9 +345,50 @@
 
    } /* Fim função: ARV Destruir árvore */
 
-/***************************************************************************
-*
-*  Função: ARV Adicionar filho à esquerda
+/***************************************************************************/
+  /* *  Função: Printa Testes
+*  ****/
+
+   void Print_Testes ()
+   {
+	   tpNoArvore *No = costura->pNoIni;
+	   printf("Costura: ");
+	   while(No!=NULL)
+	   {
+		   printf("%c -> ", No->Valor);
+		   No=No->pNoCostura;
+	   }
+	   No = costura->pNoIni;
+	   printf("Lista encadeada de numeros:\n");
+	   while (No != NULL) 
+	   { 
+		   printf("%c : %d->%d->%d\n", No->Valor, No->pNoLista->chave, No->pNoLista->pNoLista->chave, 
+										No->pNoLista->pNoLista->pNoLista->chave);
+		   No = No->pNoCostura; 
+	   } 
+   }
+
+      ARV_tpCondRet ARV_Printa( void )
+   {
+      if ( pArvore != NULL )
+      {
+         if ( pArvore->pNoCorr != NULL )
+         {
+            Print_Testes() ;
+         } 
+		 else
+		 {
+			 return ARV_CondRetArvoreVazia ;
+		 }
+		 return ARV_CondRetOK ;
+      }
+	  else
+	  {
+		  return ARV_CondRetArvoreNaoExiste ;
+	  }
+
+   } /* Fim função: Printa Costura */
+/*  Função: ARV Adicionar filho à esquerda
 *  ****/
 
    ARV_tpCondRet ARV_InserirEsquerda( char ValorParm )

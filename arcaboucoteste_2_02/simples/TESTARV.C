@@ -65,6 +65,8 @@
 #define     OBTER_VAL_CMD       "=obter"
 #define     DESTROI_CMD         "=destruir"
 #define		COSTURA_CMD			"=costurar"
+#define		PRINTA_CMD			"=print"
+#define		LISTA_CMD			"=lista"
 
 /*****  Código das funções exportadas pelo módulo  *****/
 
@@ -255,9 +257,46 @@
             CondRetObtido = ARV_Costura( ) ;
 
             return TST_CompararInt( CondRetEsperada , CondRetObtido ,
-                                   "Retorno errado ao costurar as folhas." );
+                                   "Retorno errado ao printar a costura das folhas." );
 
          } /* fim ativa: Testar ARV Costura */
+
+		 /* Testar Print */
+
+         else if ( strcmp( ComandoTeste , PRINTA_CMD ) == 0 )
+         {
+            NumLidos = LER_LerParametros( "i" ,
+                                &CondRetEsperada ) ;
+            if ( NumLidos != 1 )
+            {
+               return TST_CondRetParm ;
+            } 
+
+            CondRetObtido = ARV_Printa( ) ;
+
+            return TST_CompararInt( CondRetEsperada , CondRetObtido ,
+                                   "Retorno errado ao printar costurar as folhas." );
+
+         } /* fim ativa: Print */
+
+		 /* Funçao da Lista de numeros */
+
+         else if ( strcmp( ComandoTeste , LISTA_CMD ) == 0 )
+         {
+			 int n1,n2,n3;
+            NumLidos = LER_LerParametros( "iiii" ,
+                                &CondRetEsperada, &n1, &n2, &n3 ) ;
+            if ( NumLidos != 4 )
+            {
+               return TST_CondRetParm ;
+            } 
+
+            CondRetObtido = ARV_Faz_Lista( n1, n2, n3) ;
+
+            return TST_CompararInt( CondRetEsperada , CondRetObtido ,
+                                   "Retorno errado ao tentar fazer a lista de inteiros." );
+
+         } /* fim ativa: Funçao da Lista de numeros */
 
       /* Testar ARV Destruir árvore */
 

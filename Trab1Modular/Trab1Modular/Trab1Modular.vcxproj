@@ -76,14 +76,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\..\ProgModular\arcaboucoteste_2_02\simples\ARVORE.C" />
-    <ClCompile Include="..\..\..\..\..\..\..\ProgModular\arcaboucoteste_2_02\simples\TESTARV.C" />
+    <ClCompile Include="..\..\arcaboucoteste_2_02\simples\ARVORE.C" />
+    <ClCompile Include="..\..\arcaboucoteste_2_02\simples\TESTARV.C" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\..\ProgModular\arcaboucoteste_2_02\simples\ARVORE.H" />
-    <ClInclude Include="..\..\..\..\..\..\..\ProgModular\arcaboucoteste_2_02\simples\GENERICO.H" />
-    <ClInclude Include="..\..\..\..\..\..\..\ProgModular\arcaboucoteste_2_02\simples\LERPARM.H" />
-    <ClInclude Include="..\..\..\..\..\..\..\ProgModular\arcaboucoteste_2_02\simples\TST_ESPC.H" />
+    <ClInclude Include="..\..\arcaboucoteste_2_02\simples\ARVORE.H" />
+    <ClInclude Include="..\..\arcaboucoteste_2_02\simples\GENERICO.H" />
+    <ClInclude Include="..\..\arcaboucoteste_2_02\simples\LERPARM.H" />
+    <ClInclude Include="..\..\arcaboucoteste_2_02\simples\TST_ESPC.H" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="..\..\..\..\..\..\..\ProgModular\arcaboucoteste_2_02\tabela\ArcaboucoTeste.lib" />

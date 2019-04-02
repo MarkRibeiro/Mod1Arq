@@ -15,24 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\..\ProgModular\arcaboucoteste_2_02\simples\ARVORE.C">
+    <ClCompile Include="..\..\arcaboucoteste_2_02\simples\TESTARV.C">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\..\ProgModular\arcaboucoteste_2_02\simples\TESTARV.C">
+    <ClCompile Include="..\..\arcaboucoteste_2_02\simples\ARVORE.C">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\..\ProgModular\arcaboucoteste_2_02\simples\ARVORE.H">
+    <ClInclude Include="..\..\arcaboucoteste_2_02\simples\TST_ESPC.H">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\..\ProgModular\arcaboucoteste_2_02\simples\GENERICO.H">
+    <ClInclude Include="..\..\arcaboucoteste_2_02\simples\LERPARM.H">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\..\ProgModular\arcaboucoteste_2_02\simples\LERPARM.H">
+    <ClInclude Include="..\..\arcaboucoteste_2_02\simples\GENERICO.H">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\..\ProgModular\arcaboucoteste_2_02\simples\TST_ESPC.H">
+    <ClInclude Include="..\..\arcaboucoteste_2_02\simples\ARVORE.H">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
