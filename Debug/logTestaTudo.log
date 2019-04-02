@@ -1,0 +1,39 @@
+
+!!! Inicio dos testes
+!!!      Construto sob teste: T1Modular.exe
+!!!      Script de teste:     TestaCostura.script
+
+!!!    0  Linha:     1  // Script:    RecuperaErros.script 
+!!!    0  Linha:     2  // Autor:     Caio Melo, Mark Ribeiro, Guilheme Bizzo 
+!!!    0  Linha:     3  // Data:      28/03/2019 
+!!!    0  Linha:     4  // Propósito: Testar a costura. 
+    6  == Criar arvore
+    9  == Inserir a direita
+   12  == Inserir a direita
+   15  == Ir para o pai
+   18  == Inserir a esquerda
+   21  == Inserir a esquerda
+   24  == Ir para o pai
+   27  == Inserir a direita
+   30  == Ir para o pai
+   33  == Ir para o pai
+   36  == Ir para no direita
+   39  == Inserir a direita
+   42  == Inserir a direita
+   45  == Ir para o pai
+   48  == Inserir a esquerda
+   51  == Ir para o pai
+   54  == Ir para o pai
+   57  == Costura
+   60  ==Cria lista encadeada de inteiros
+   63  ==Printa
+
+!!! Número de linhas lidas:          64
+!!! Número de casos de teste:        20
+!!! Número comandos corretos:        20
+!!! Número de falhas encontradas:     0
+
+!!! Não foram encontrados problemas
+
+
+!!! Numero de espacos ainda alocados: 0
