@@ -1,1 +1,0 @@
-Trab1Modular /stestearvore.script >saida.txt
