@@ -1,0 +1,49 @@
+
+!!! Inicio dos testes
+!!!      Construto sob teste: T1Modular
+!!!      Script de teste:     TesteTudo.script
+
+!!!    0  Linha:     1  // Script:    RecuperaErros.script 
+!!!    0  Linha:     2  // Autor:     Caio Melo, Mark Ribeiro, Lucca Almeida 
+!!!    0  Linha:     3  // Data:      28/03/2019 
+!!!    0  Linha:     4  // Propósito: Testar a costura. 
+    6  == Criar arvore
+    9  ==insere 'a'
+   12  ==insere 'b' a esquerda de 'a'
+   15  ==insere 'c' a esquerda de 'b'
+   18  ==insere 'e' a esquerda de 'c'
+   21  ==vai para pai de 'e' (c)
+   24  ==insere 'k' a direita de 'c'
+   27  ==vai para pai de 'k' (c)
+   30  ==vai para pai de 'c' (b)
+   33  ==insere 'f' a direita de 'b'
+   36  ==insere 'o' a esquerda de 'f'
+   39  ==vai para pai de 'o' (f)
+   42  ==insere 'n' a direita de 'f'
+   45  ==vai para pai de 'h' (f)
+   48  ==vai para pai de 'f' (b)
+   51  ==vai para pai de 'b' (a)
+   54  ==insere 'i' a direita de 'a'
+   57  ==incere 'j' a esquerda de 'i'
+   60  ==insere 'h' a esquerda de 'j'
+   63  ==vai para pai de 'h' (j)
+   66  ==insere 'd' a direita de 'j'
+   69  ==vai para pai de 'd' (j)
+   72  ==vai para pai de 'j' (i)
+   75  ==insere 'm' a direita de 'i'
+   78  ==insere 'g' a esquerda de 'm'
+   81  ==vai para pai de 'g' (m)
+   84  ==insere 'l' direita de 'm'
+   87  == Costura
+   90  ==Cria lista encadeada de inteiros
+   93  ==Printa
+
+!!! Número de linhas lidas:          94
+!!! Número de casos de teste:        30
+!!! Número comandos corretos:        30
+!!! Número de falhas encontradas:     0
+
+!!! Não foram encontrados problemas
+
+
+!!! Numero de espacos ainda alocados: 0

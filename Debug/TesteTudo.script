@@ -1,0 +1,94 @@
+// Script:    RecuperaErros.script
+// Autor:     Caio Melo, Mark Ribeiro, Lucca Almeida
+// Data:      28/03/2019
+// Propósito: Testar a costura.
+
+== Criar arvore
+=criar      0   0
+
+==insere 'a'
+=insdir 'a'	0
+
+==insere 'b' a esquerda de 'a'
+=insesq 'b'	0
+
+==insere 'c' a esquerda de 'b'
+=insesq 'c'	0
+
+==insere 'e' a esquerda de 'c'
+=insesq 'e'	0
+
+==vai para pai de 'e' (c)
+=irpai 	0
+
+==insere 'k' a direita de 'c'
+=insdir 'k'	0
+
+==vai para pai de 'k' (c)
+=irpai 	0
+
+==vai para pai de 'c' (b)
+=irpai 	0
+
+==insere 'f' a direita de 'b'
+=insdir 'f'	0
+
+==insere 'o' a esquerda de 'f'
+=insesq 'o'	0
+
+==vai para pai de 'o' (f)
+=irpai 	0
+
+==insere 'n' a direita de 'f'
+=insdir 'n'	0
+
+==vai para pai de 'h' (f)
+=irpai 	0
+
+==vai para pai de 'f' (b)
+=irpai 	0
+
+==vai para pai de 'b' (a)
+=irpai 	0
+
+==insere 'i' a direita de 'a'
+=insdir 'i'	0
+
+==incere 'j' a esquerda de 'i'
+=insesq 'j'	0
+
+==insere 'h' a esquerda de 'j'
+=insesq 'h'	0
+
+==vai para pai de 'h' (j)
+=irpai 	0
+
+==insere 'd' a direita de 'j'
+=insdir 'd'	0
+
+==vai para pai de 'd' (j)
+=irpai 	0
+
+==vai para pai de 'j' (i)
+=irpai 	0
+
+==insere 'm' a direita de 'i'
+=insdir 'm'	0
+
+==insere 'g' a esquerda de 'm'
+=insesq 'g'	0
+
+==vai para pai de 'g' (m)
+=irpai 	0
+
+==insere 'l' direita de 'm'
+=insdir 'l'	0
+
+== Costura
+=costurar 0
+
+==Cria lista encadeada de inteiros
+=lista 0 1 7 4
+
+==Printa
+=print 	  0
